@@ -1,2 +1,4 @@
 # simple-promise
 自己实现一个简单的promise
+
+原来是利用了观察者模式，将promise.then的回调函数保存在一个队列里面，等待异步任务执行完毕，执行reslove或者reject的时候，再遍历观察者数组，并将异步结果作为参数执行
